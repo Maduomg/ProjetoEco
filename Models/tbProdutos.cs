@@ -1,7 +1,7 @@
 ﻿namespace ProjetoEcommerce.Models
 {
 
-    public class Produto
+    public class tbProdutos
     {
         public int Id { get; set; }
         public string Nome { get; set; }

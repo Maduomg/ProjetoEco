@@ -25,17 +25,22 @@
     border:1px solid #555;
     box-sizing:border-box;
 }
-.btn-primary{
-    background-image:linear-gradient(purple,aqua);
-    color:#fff;
-    padding:10px 15px;
-    border:none;
-    border-radius:20px;
-    cursor:pointer;
-    width:100%;
-    margin:0 auto;
-    transition: 0.1s color ease;
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: rgba(239,144,203); 
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-.btn-primary:hover{
-    background:blue;
+
+.btn-primary:hover {
+    background-color: rgba(255, 193, 7, 1);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #000;
 }

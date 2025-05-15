@@ -12,7 +12,7 @@ namespace ProjetoEcommerce.Repositorio
 
         private readonly string _conexaoMySQL = configuration.GetConnectionString("ConexaoMySQL");
 
-        public Usuario ObterUsuario(string email)
+        public tbUsuarios ObterUsuario(string email)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
@@ -23,13 +23,13 @@ namespace ProjetoEcommerce.Repositorio
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 MySqlDataReader dr;
-                Usuario usuario = new Usuario();
+                tbUsuarios usuario = new tbUsuarios();
 
                 dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
                 if (dr.Read())
                 {
-                    usuario = new Usuario
+                    usuario = new tbUsuarios
                     {
                         Id = Convert.ToInt32(dr["Id"]),
                         Nome = dr["Nome"].ToString(),

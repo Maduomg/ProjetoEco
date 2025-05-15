@@ -31,7 +31,7 @@ namespace ProjetoEcommerce.Controllers
 
         // Action que recebe e processa os dados que serão enviados pelo formulário de cadastro de cliente (via Requisição POST)
         [HttpPost]
-        public IActionResult CadastrarProduto(Produto produto)
+        public IActionResult CadastrarProduto(tbProdutos produto)
         {
 
             /* O parâmetro 'cliente' recebe os dados enviados pelo formulário,
@@ -69,7 +69,7 @@ namespace ProjetoEcommerce.Controllers
         /*[Bind] para especificar explicitamente quais propriedades do objeto Cliente podem ser vinculadas a partir dos dados do formulário.
         Isso é uma boa prática de segurança para evitar o overposting (onde um usuário malicioso pode enviar dados para propriedades
         que você não pretendia que fossem alteradas)*/
-        public IActionResult EditarProduto(int id, [Bind("Id, Nome,Descricao,Preco, Quantidade")] Produto produto)
+        public IActionResult EditarProduto(int id, [Bind("Id, Nome,Descricao,Preco, Quantidade")] tbProdutos produto)
         {
             // Verifica se o ID fornecido na rota corresponde ao ID do cliente no modelo.
             if (id != produto.Id)

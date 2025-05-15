@@ -1,10 +1,47 @@
-﻿
-
-.video-fundo{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    object-fit:cover;
-    z-index:-1;
+﻿.titulo-rosa {
+    color: #e91e63; /* Rosa vibrante */
+    font-weight: bold;
 }
+
+.subtitulo-verde {
+    color: #4caf50; /* Verde médio */
+    font-weight: bold;
+}
+
+
+
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6) contrast(1.1) saturate(1.2);
+}
+
+.btn-outline-primary {
+    margin-top: 100px;
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: rgba(255, 105, 180, 0.9); /* rosa pink suave */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(255, 105, 180, 1); /* mais forte no hover */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+
+

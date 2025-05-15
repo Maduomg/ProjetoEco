@@ -11,13 +11,12 @@ namespace ProjetoEcommerce.Repositorio
         private readonly string _conexaoMySQL = configuration.GetConnectionString("ConexaoMySQL");
 
 
-        public void Cadastrar(Produto produto)
+        public void Cadastrar(tbProdutos produto)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("insert into produto (Nome, Descricao, Preco, Quantidade) values (@nome, @descricao, @preco, @quantidade)", conexao); // @: PARAMETRO
-                                                                                                                                                                          // Adiciona um parâmetro para o nome, definindo seu tipo e valor
+                MySqlCommand cmd = new MySqlCommand("insert into produto (Nome, Descricao, Preco, Quantidade) values (@nome, @descricao, @preco, @quantidade)", conexao);
                 cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.Nome;
                 cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.Descricao;
                 cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.Preco;
@@ -26,7 +25,7 @@ namespace ProjetoEcommerce.Repositorio
                 conexao.Close();
             }
         }
-        public bool Atualizar(Produto produto)
+        public bool Atualizar(tbProdutos produto)
         {
             try
             {
@@ -49,9 +48,9 @@ namespace ProjetoEcommerce.Repositorio
 
             }
         }
-        public IEnumerable<Produto> TodosProdutos()
+        public IEnumerable<tbProdutos> TodosProdutos()
         {
-            List<Produto> Produtolist = new List<Produto>();
+            List<tbProdutos> Produtolist = new List<tbProdutos>();
 
     
             using (var conexao = new MySqlConnection(_conexaoMySQL))
@@ -66,7 +65,7 @@ namespace ProjetoEcommerce.Repositorio
                 foreach (DataRow dr in dt.Rows)
                 {
                     Produtolist.Add(
-                                new Produto
+                                new tbProdutos
                                 {
                                     Id = Convert.ToInt32(dr["CodPro"]), 
                                     Nome = ((string)dr["Nome"]), 
@@ -79,7 +78,7 @@ namespace ProjetoEcommerce.Repositorio
                 return Produtolist;
             }
         }
-        public Produto ObterProduto(int Codigo)
+        public tbProdutos ObterProduto(int Codigo)
         {
 
             using (var conexao = new MySqlConnection(_conexaoMySQL))
@@ -94,7 +93,7 @@ namespace ProjetoEcommerce.Repositorio
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 MySqlDataReader dr;
 
-                Produto produto = new Produto();
+                tbProdutos produto = new tbProdutos();
 
                 dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 while (dr.Read())
