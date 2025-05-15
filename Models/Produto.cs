@@ -1,15 +1,13 @@
 ﻿namespace ProjetoEcommerce.Models
 {
 
-    public class Cliente
+    public class Produto
     {
-        //CRIANDO O ENCAPSULAMENTO DO OBJETO COM GET E SET
-        public int CodCli { get; set; } //Acessores
-        // Ao usar ?, você está explicitamente dizendo que a propriedade pode intencionalmente ter um valor nulo.
-        public string? NomeCli { get; set; }
-        public string? TelCli { get; set; }
-        public string? EmailCli { get; set; }
-        public List<Cliente>? ListaCliente { get; set; }
-
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public decimal Preco { get; set; }
+        public int quantidade { get; set; }
     }
+
 }
