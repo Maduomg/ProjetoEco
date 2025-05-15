@@ -1,12 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoEcommerce.Models;
+using ProjetoEcommerce.Repositorio;
 using System.Data;
+
 
 
 namespace ProjetoEcommerce.Repositorio
 {
        // Define a classe responsável por interagir com os dados de clientes no banco de dados
-        public class UsuarioRepositorio(IConfiguration configuration)
+        public class LoginRepositorio(IConfiguration configuration)
         {
             // Declara uma variável privada somente leitura para armazenar a string de conexão com o MySQL
             private readonly string _conexaoMySQL = configuration.GetConnectionString("ConexaoMySQL");
