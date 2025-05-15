@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // INJEÇÃO DE DEPENDENCIA 
-builder.Services.AddScoped<UsuarioRepositorio>();
-builder.Services.AddScoped<ClienteRepositorio>();
+builder.Services.AddScoped<ProdutoRepositorio>();
+builder.Services.AddScoped<LoginRepositorio>();
 
 
 
