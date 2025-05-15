@@ -6,16 +6,11 @@ namespace ProjetoEcommerce.Controllers
 {
     public class ProdutoController : Controller
     {
-        /* Declara uma variável privada somente leitura do tipo ClienteRepositorio chamada _clienteRepositorio.
-         O "readonly" indica que o valor desta variável só pode ser atribuído no construtor da classe.
-         ClienteRepositorio é uma classe do repositorio responsável por interagir com a camada de dados para gerenciar informações de usuários.*/
         private readonly ProdutoRepositorio _produtoRepositorio;
 
-        /* Define o construtor da classe LoginController.
-        Recebe uma instância de UsuarioRepositorio como parâmetro (injeção de dependência)*/
         public ProdutoController(ProdutoRepositorio produtoRepositorio)
         {
-            /* O construtor é chamado quando uma nova instância de LoginController é criada.*/
+     
             _produtoRepositorio = produtoRepositorio;
         }
 
