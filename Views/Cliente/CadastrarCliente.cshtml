@@ -1,0 +1,45 @@
+﻿@model ProjetoEcommerce.Models.Cliente;
+
+<link href="~/css/cadastracli.css" rel="stylesheet" />
+
+<h1 class="titulo-cli">Cadastrar Cliente</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastrarCliente">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="NomeCli" class="control-label"></label>
+                <input asp-for="NomeCli" class="form-control" />
+                <span asp-validation-for="NomeCli" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TelCli" class="control-label"></label>
+                <input asp-for="TelCli" class="form-control" />
+                <span asp-validation-for="TelCli" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EmailCli" class="control-label"></label>
+                <input asp-for="EmailCli" class="form-control" />
+                <span asp-validation-for="EmailCli" class="text-danger"></span>
+            </div>
+
+            <div class="btn">
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                </div>
+                <div class="form-group">
+                    <a asp-action="Index" class="btn btn-success">Voltar</a>
+                </div>
+            </div>
+           
+
+        </form>
+    </div>
+</div>
+

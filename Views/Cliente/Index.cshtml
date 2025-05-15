@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ProjetoEcommerce.Models.Cliente>
+
+
+<link href="~/css/listacliente.css" rel="stylesheet" />
+
+<p>
+    <a asp-controller="Cliente" asp-action="CadastrarCliente" class="btn btn-primary">Cadastra Cliente</a>
+</p>
+<table class="table custom-table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodCli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelCli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailCli)
+            </th>
+            <th class="text-center">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodCli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeCli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelCli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailCli)
+                </td>
+                <td class="text-center">
+                    <a asp-controller="Cliente" asp-action="EditarCliente" asp-route-id="@item.CodCli" class="btn btn-sm btn-warning">Editar</a>
+                    <span>|</span>
+                    <a asp-controller="Cliente" asp-action="ExcluirCliente" asp-route-id="@item.CodCli"
+                       onclick="return confirm('Deseja realmente Excluir este item?');" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
