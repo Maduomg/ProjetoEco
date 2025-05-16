@@ -1,16 +1,25 @@
-﻿.login-title{
-    text-align:center;
-    color:blue;
-    margin-bottom:20px;
+﻿body {
+    background-color: black;
 }
-.login-form{
-    width:300px;
+.login-title {
+    text-align: center;
+    color: rgba(239,144,203);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px deeppink, 0 0 20px deeppink;
+}
+.login-form {
+    width: 300px;
     margin: 0 auto;
-    padding:20px;
+    padding: 20px;
     border: 1px solid #ccc;
-    border-radius:10px;
+    border-radius: 10px;
     background: #f4f4f4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+    .login-form:hover {
+        transform: translateY(-3px) scale(1.05);
+    }
 .form-group{
     margin-bottom:15px;
 }
@@ -32,15 +41,15 @@
     color: #000;
     font-weight: bold;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-primary:hover {
-    background-color: rgba(255, 193, 7, 1);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    color: #000;
-}
+    .btn-primary:hover {
+        background-color: #5CE65C;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        color: #f4f4f4;
+    }

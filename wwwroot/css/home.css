@@ -1,11 +1,14 @@
 ﻿.titulo-rosa {
-    color: #e91e63; /* Rosa vibrante */
+    margin-top: 13rem;
+    color: #e91e63; 
     font-weight: bold;
+    text-shadow: 0 0 1px deeppink, 0 0 5px deeppink;
 }
 
 .subtitulo-verde {
-    color: #4caf50; /* Verde médio */
+    color: #4caf50; 
     font-weight: bold;
+    text-shadow: 0 0 2px limegreen, 0 0 6px limegreen;
 }
 
 
@@ -22,7 +25,7 @@
 }
 
 .btn-outline-primary {
-    margin-top: 100px;
+    margin-top: 20px;
     display: inline-block;
     padding: 12px 28px;
     background-color: rgba(255, 105, 180, 0.9); /* rosa pink suave */

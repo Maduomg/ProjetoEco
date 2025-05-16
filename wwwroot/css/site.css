@@ -2,6 +2,12 @@ html {
   font-size: 14px;
 }
 
+body {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
 #logo{
     width:40px;
     height:40px;
