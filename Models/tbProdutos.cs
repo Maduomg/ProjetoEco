@@ -7,7 +7,9 @@
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Preco { get; set; }
-        public int quantidade { get; set; }
+        public int Quantidade { get; set; }
+
+        public List<tbProdutos> ?Produtos { get; set; }
     }
 
 }

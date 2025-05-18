@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.Preco)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.quantidade)
+                @Html.DisplayNameFor(model => model.Quantidade)
             </th>
             <th class="text-center">Ação</th>
         </tr>
@@ -32,19 +32,19 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayNameFor(model => model.Id)
+                    @Html.DisplayFor(modelItem => item.Id)
                 </td>
                 <td>
-                    @Html.DisplayNameFor(model => model.Nome)
+                    @Html.DisplayFor(modelItem => item.Nome)
                 </td>
                 <td>
-                    @Html.DisplayNameFor(model => model.Descricao)
+                    @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
-                    @Html.DisplayNameFor(model => model.Preco)
+                    @Html.DisplayFor(modelItem => item.Preco)
                 </td>
                 <td>
-                    @Html.DisplayNameFor(model => model.quantidade)
+                    @Html.DisplayFor(modelItem => item.Quantidade)
                 </td>
                 <td class="text-center">
                     <a asp-controller="Produto" asp-action="EditarProduto" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>

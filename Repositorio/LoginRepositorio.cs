@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoEcommerce.Models;
-using ProjetoEcommerce.Repositorio;
 using System.Data;
 
 
@@ -10,37 +9,40 @@ namespace ProjetoEcommerce.Repositorio
     public class LoginRepositorio(IConfiguration configuration)
     {
 
-        private readonly string _conexaoMySQL = configuration.GetConnectionString("ConexaoMySQL");
+        private readonly string _conexaoMySQL = configuration.GetConnectionString("conexaoMySQL");
 
         public tbUsuarios ObterUsuario(string email)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * from usuario where Id=@codigo ", conexao);
-                cmd.Parameters.AddWithValue("@email", MySqlDbType.VarChar).Value = email;
 
+                MySqlCommand cmd = new ("SELECT * FROM tbUsuarios WHERE Email = @email", conexao);
 
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                MySqlDataReader dr;
-                tbUsuarios usuario = new tbUsuarios();
+                cmd.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
 
-                dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-
-                if (dr.Read())
+                using (MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
                 {
-                    usuario = new tbUsuarios
+                    tbUsuarios usuario = null;
+
+            
+
+                    if (dr.Read())
                     {
-                        Id = Convert.ToInt32(dr["Id"]),
-                        Nome = dr["Nome"].ToString(),
-                        Email = dr["Email"].ToString(),
-                        Senha = dr["Senha"].ToString(),
-                    };
+                        usuario = new tbUsuarios
+                        {
+                            Id = Convert.ToInt32(dr["Id"]),
+                            Nome = dr["Nome"].ToString(),
+                            Email = dr["Email"].ToString(),
+                            Senha = dr["Senha"].ToString()
+                        };
 
 
+                    }
+
+                    return usuario;
                 }
 
-                return usuario;
             }
 
         }

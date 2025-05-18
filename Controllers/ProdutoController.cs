@@ -45,7 +45,7 @@ namespace ProjetoEcommerce.Controllers
 
         /* Action para exibir o formulário de edição de um cliente específico (via Requisição GET)
          Este método recebe o 'id' do cliente a ser editado como parâmetro.*/
-        public IActionResult EditarPorduto(int id)
+        public IActionResult EditarProduto(int id)
         {
             // Obtém o cliente específico do repositório usando o ID fornecido.
             var produto = _produtoRepositorio.ObterProduto(id);
@@ -69,7 +69,7 @@ namespace ProjetoEcommerce.Controllers
         /*[Bind] para especificar explicitamente quais propriedades do objeto Cliente podem ser vinculadas a partir dos dados do formulário.
         Isso é uma boa prática de segurança para evitar o overposting (onde um usuário malicioso pode enviar dados para propriedades
         que você não pretendia que fossem alteradas)*/
-        public IActionResult EditarProduto(int id, [Bind("Id, Nome,Descricao,Preco, Quantidade")] tbProdutos produto)
+        public IActionResult EditarProduto(int id, [Bind("Id, Nome, Descricao, Preco, Quantidade")] tbProdutos produto)
         {
             // Verifica se o ID fornecido na rota corresponde ao ID do cliente no modelo.
             if (id != produto.Id)
@@ -101,7 +101,7 @@ namespace ProjetoEcommerce.Controllers
         }
 
 
-        public IActionResult ExcluirCliente(int id)
+        public IActionResult ExcluirProduto(int id)
         {
             // Obtém o cliente específico do repositório usando o Codigo fornecido.
             _produtoRepositorio.Excluir(id);

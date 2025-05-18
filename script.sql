@@ -3,14 +3,15 @@ use Ecommerce;
 
 create table tbUsuarios(
 Id int primary key auto_increment,
-Nome varchar (30) not null,
-Email  varchar (30) not null,
-Senha  varchar (30) not null);
+Nome varchar(50),
+Email  varchar(50),
+Senha  varchar(50)
+);
 
 create table tbProdutos(
 Id int primary key auto_increment,
-Nome varchar (30) not null,
-Descricao varchar (30) not null,
-Preco decimal (10,2) not null,
-Quantidade int not null);
+Nome varchar(50),
+Descricao varchar(50),
+Preco decimal(10,2),
+Quantidade int);
 
