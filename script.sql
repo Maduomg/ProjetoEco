@@ -15,3 +15,5 @@ Descricao varchar(50),
 Preco decimal(10,2),
 Quantidade int);
 
+insert into tbUsuarios (Nome,Email,Senha) values ('Dangar','admin@gmail.com','12345');
+
