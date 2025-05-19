@@ -1,4 +1,8 @@
-﻿.custom-table {
+﻿body {
+    background-color: #ffe6f0;
+}
+
+.custom-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
@@ -42,7 +46,8 @@
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #e60000;
+    border: 2px solid #e60000;
 }
 
     .btn-primary:hover {
