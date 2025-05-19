@@ -1,18 +1,29 @@
-﻿.titulo-cli
-{
-    text-align:center;
-    color:blue;
-    margin-bottom:20px;
+﻿.titulo-pro {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px deeppink, 0 0 20px deeppink;
 }
-.col-md-4{
-    margin: 0 auto;
-    padding:20px;
-    border:1px solid #555;
-    background:#ffd800;
-    box-shadow:2px 5px #333;
+
+body {
+    background-image: url('/mine.jpg'); /* ou o caminho certo, ex: ./img/mine.jpg */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
+
+.col-md-4 {
+    background-color: #ffe6f0;
+    padding: 30px;
+    width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .form-group {
-    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px 10px;
     width: 100%;
@@ -24,3 +35,30 @@
     justify-content:center;
     align-items:center;
 }
+
+.btn-primary {
+    background-color: #e60000;
+    color: white;
+    margin-right: 10px;
+    border: 2px solid #e60000;
+}
+
+    .btn-primary:hover {
+        background-color: #8b034b;
+        border: 2px solid #8b034b;
+        transform: translateY(-3px) scale(1.05);
+    }
+
+
+.btn-success {
+    background-color: #31bf42;
+    color: white;
+    margin-right: 10px;
+    border: 2px solid #31bf42;
+}
+
+    .btn-success:hover {
+        background-color: #1c6e37;
+        border: 2px solid #1c6e37;
+        transform: translateY(-3px) scale(1.05);
+    }
