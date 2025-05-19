@@ -1,7 +1,17 @@
-﻿.titulo-cli {
-    color: #333;
+﻿body {
+    background-image: url('/mine.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.titulo-pro {
+    text-align: center;
+    color: #ffffff;
     margin-bottom: 20px;
-    text-align: center; /* Opcional: Centralizar o título */
+    text-shadow: 0 0 10px deeppink, 0 0 20px deeppink;
 }
 
 h4 {
@@ -14,19 +24,21 @@ hr {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais suave */
+    border-top: 5px solid rgba(0, 0, 0, 0.1); /* Borda mais suave */
 }
 
 .col-md-4 {
     margin: 0 auto; /* Centralizar o formulário em telas maiores */
-    padding: 20px;
-    border: 1px solid #dee2e6; /* Borda leve no formulário */
-    border-radius: 5px;
-    background-color: #f8f9fa; /* Fundo claro para o formulário */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Leve sombra */
+    background-color: #ffe6f0;
+    padding: 30px;
+    width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .form-group {
+    background-color: #ffe6f0;
     margin-bottom: 1.5rem; /* Aumentar um pouco o espaçamento entre os campos */
 }
 
@@ -59,9 +71,31 @@ hr {
 }
 
 .btn-primary {
-    width: 100%; /* Ocupar a largura total do container */
+    background-color: #e60000;
+    color: white;
+    margin-right: 10px;
+    border: 2px solid #e60000;
 }
 
+    .btn-primary:hover {
+        background-color: #8b034b;
+        border: 2px solid #8b034b;
+        transform: translateY(-3px) scale(1.05);
+    }
+
+
+.btn-success {
+    background-color: #31bf42;
+    color: white;
+    margin-right: 10px;
+    border: 2px solid #31bf42;
+}
+
+    .btn-success:hover {
+        background-color: #1c6e37;
+        border: 2px solid #1c6e37;
+        transform: translateY(-3px) scale(1.05);
+    }
 .btn-secondary {
     /* Estilos adicionais para o botão "Voltar" se desejar */
 }

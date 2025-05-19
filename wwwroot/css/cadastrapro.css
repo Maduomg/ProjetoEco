@@ -4,6 +4,9 @@
     margin-bottom: 20px;
     text-shadow: 0 0 10px deeppink, 0 0 20px deeppink;
 }
+hr {
+    border: 2px solid #000000;
+}
 
 body {
     background-image: url('/mine.jpg'); /* ou o caminho certo, ex: ./img/mine.jpg */
